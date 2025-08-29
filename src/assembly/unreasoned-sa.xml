@@ -8,7 +8,7 @@
     <includeBaseDirectory>false</includeBaseDirectory>
     <fileSets>
         <fileSet>
-            <directory>${project.build.directory}/datastore</directory>
+            <directory>${project.build.directory}/datastore-reasoned</directory>
             <includes>
                 <include>**</include>
             </includes>
@@ -19,23 +19,8 @@
         </fileSet>
     </fileSets>
     <files>
-<!--        <file>-->
-<!--            <source>${data-properties.path}</source>-->
-<!--            <outputDirectory>META-INF</outputDirectory>-->
-<!--            <destName>${project.artifactId}-${project.version}.properties</destName>-->
-<!--        </file>-->
-<!--        <file>-->
-<!--            <source>${project.basedir}/pom.xml</source>-->
-<!--            <outputDirectory>META-INF</outputDirectory>-->
-<!--            <destName>${project.artifactId}-${project.version}-pipeline.xml</destName>-->
-<!--        </file>-->
-<!--        <file>-->
-<!--            <source>${project.build.directory}/data-artifact-pom.xml</source>-->
-<!--            <outputDirectory>META-INF</outputDirectory>-->
-<!--            <destName>${project.artifactId}-${project.version}.pom</destName>-->
-<!--        </file>-->
         <file>
-            <source>${project.basedir}/pom.xml</source>
+            <source>${project.build.directory}/.flattened-pom.xml</source>
             <outputDirectory>META-INF</outputDirectory>
             <destName>${project.artifactId}-${project.version}.pom</destName>
         </file>

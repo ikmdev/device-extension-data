@@ -140,6 +140,16 @@
 									<type>zip</type>
 									<classifier>unreasoned-pb</classifier>
 								</artifact>
+								<artifact>
+									<file>${project.build.directory}/${data-artifact.prefix}-reasoned-sa.zip</file>
+									<type>zip</type>
+									<classifier>reasoned-sa</classifier>
+								</artifact>
+								<artifact>
+									<file>${project.build.directory}/${data-artifact.prefix}-unreasoned-sa.zip</file>
+									<type>zip</type>
+									<classifier>unreasoned-sa</classifier>
+								</artifact>
 							</artifacts>
 						</configuration>
 					</execution>
@@ -360,6 +370,7 @@
 						<artifactId>maven-assembly-plugin</artifactId>
 						<configuration>
 							<finalName>${data-artifact.prefix}</finalName>
+							<attach>false</attach> <!-- Must attach artifacts outside the profile for the automated build -->
 						</configuration>
 						<executions>
 							<!-- Zip up unreasoned spinedarray database -->
